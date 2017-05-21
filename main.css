@@ -1,0 +1,30 @@
+.Title h1
+{
+    text-align: center;
+}
+
+.StartButton
+{
+    margin: 0;
+    text-align: center;
+}
+
+.StartButton a button
+{
+    font-size: 20px;
+}
+
+.AboutSectionTitle h2
+{
+    text-align: center;
+}
+
+.CompanyLogo img
+{
+    align-content: center;
+}
+
+.TutorialText p
+{
+    text-align: center;
+}
