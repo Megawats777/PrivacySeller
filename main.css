@@ -1,6 +1,8 @@
 .Title h1
 {
-    font-size: 65px;
+    font-size: 70px;
+    font-family: 'Khula', sans-serif;
+    font-weight: bold;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 60px;
@@ -18,25 +20,33 @@
 {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    font-size: 25px;
-    width: 40%;
+    color: white;
+    background-color: #2196F3;
+    font-family: 'Khula', sans-serif;
+    font-size: 40px;
+    width: 50%;
 }
 
 .StartButton a button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
     background-color: white;
+    color:black;
 }
 
 .AboutSection
 {
     border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgba(240, 240, 240, 1)
 }
 
 .AboutSection .SectionTitle h2
 {
     text-align: center;
-    font-size: 30px;
+    text-decoration: underline;
+    font-size: 35px;
+    font-family: 'Khula', sans-serif;
 }
 
 .AboutSection .CompanyLogo img
@@ -50,5 +60,15 @@
 .AboutSection .TutorialText p
 {
     padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+}
+
+.CreditsSection
+{
+    font-family: 'Khula', sans-serif;
+    padding-top: 20px;
     text-align: center;
 }
