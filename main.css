@@ -1,30 +1,54 @@
 .Title h1
 {
+    font-size: 65px;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .StartButton
 {
     margin: 0;
     text-align: center;
+    padding-top: 35px;
+    padding-bottom: 180px;
 }
 
 .StartButton a button
 {
-    font-size: 20px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    font-size: 25px;
+    width: 40%;
 }
 
-.AboutSectionTitle h2
+.StartButton a button:hover
+{
+    box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
+    background-color: white;
+}
+
+.AboutSection
+{
+    border-top: 2px solid black;
+}
+
+.AboutSection .SectionTitle h2
 {
     text-align: center;
+    font-size: 30px;
 }
 
-.CompanyLogo img
+.AboutSection .CompanyLogo img
 {
-    align-content: center;
+    padding-top: 40px;
+    display: block;
+    margin: auto;
+    width: 40%;
 }
 
-.TutorialText p
+.AboutSection .TutorialText p
 {
+    padding-top: 50px;
     text-align: center;
 }
