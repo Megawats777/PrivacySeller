@@ -1,4 +1,63 @@
+.SectionTitle
+{
+    border-bottom: black solid 2px;
+}
+
+
 .SectionTitle h1
 {
     font-family: 'Khula', sans-serif;
+    font-size: 25px;
+}
+
+.Question
+{
+    padding-top: 20px;
+    padding-bottom: 150px;
+    border-bottom: black solid 1px;
+}
+
+.Question .QuestionTitle h2
+{
+    font-family: 'Khula', sans-serif;
+}
+
+.Question .Content
+{
+    padding-top: 10px;
+}
+
+.Question .Content p
+{
+    line-height: 30px;
+    font-size: 15px;
+    font-family: 'Khula', sans-serif;
+}
+
+.Question .ResponseButtons
+{
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Khula', sans-serif;
+}
+.Question .ResponseButtons button
+{
+    font-size: 15px;
+}
+
+.Question .ResultText
+{
+    padding-top: 50px;
+}
+
+.Question .ResultText p
+{
+    font-family: 'Khula', sans-serif;
+    font-size: 20px;
+}
+
+.Question .ResultText p
+{
+    line-height: 20px;
+    text-align: center;
 }
