@@ -57,3 +57,17 @@
     line-height: 30px;
     text-align: center;
 }
+
+.CreditsSection .ExitButton
+{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.CreditsSection .ExitButton button
+{
+    font-size: 30px;
+    width: 30%;
+}
+
