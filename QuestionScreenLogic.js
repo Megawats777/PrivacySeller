@@ -31,6 +31,8 @@ var question4Results = new Array(2);
 question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has not been leaked.";
 question4Results[1] = "Upaska is no longer able to progress with their research. However Aline Systems acquires them and Upaska is now able to continue with their research. The request to your company has been leaked. However by denying the deal you were both congratulated for rejecting the deal but were criticized by some by not lending over some of your customer’s medical records in the name of science.";
 
+
+
 // The results for question 5 
 // Index 0 is the authorized transaction result
 // Index 1 is the denied transaction result
@@ -39,12 +41,67 @@ question5Results[0] = "You transferred 50% of your video content to Arcia. Arcia
 question5Results[1] = "Arcia turns to Ragal Media for video content. You did not make any losses. No further action is required.";
 
 
+
 // Answer a question
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
 // Param 2: questionNum (The question player is answering)
 function answerQuestion(answerType, questionNum)
 {
-    
+    // If the answer type is authorized
+    if (answerType === 0)
+    {
+        // Depending of the quesiton show the appropriate result
+        switch(questionNum)
+        {
+            case 1:
+                document.getElementById("q1ResultText").innerHTML = question1Results[0];
+                break;
+
+            case 2:
+                document.getElementById("q2ResultText").innerHTML = question2Results[0];
+                break;
+            
+            case 3:
+                document.getElementById("q3ResultText").innerHTML = question3Results[0];
+                break;
+
+            case 4:
+                document.getElementById("q4ResultText").innerHTML = question4Results[0];
+                break;
+
+            case 5:
+                document.getElementById("q5ResultText").innerHTML = question5Results[0];
+                break;
+        }
+    }
+
+    // If the answer type is denied
+    else if (answerType === 1)
+    {
+        // Depending of the quesiton show the appropriate result
+        switch(questionNum)
+        {
+            case 1:
+                document.getElementById("q1ResultText").innerHTML = question1Results[1];
+                break;
+
+            case 2:
+                document.getElementById("q2ResultText").innerHTML = question2Results[1];
+                break;
+            
+            case 3:
+                document.getElementById("q3ResultText").innerHTML = question3Results[1];
+                break;
+
+            case 4:
+                document.getElementById("q4ResultText").innerHTML = question4Results[1];
+                break;
+
+            case 5:
+                document.getElementById("q5ResultText").innerHTML = question5Results[1];
+                break;
+        }
+    }
 }
 
 
