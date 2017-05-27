@@ -54,10 +54,6 @@
 {
     font-family: 'Khula', sans-serif;
     font-size: 20px;
-}
-
-.Question .ResultText p
-{
-    line-height: 20px;
+    line-height: 30px;
     text-align: center;
 }

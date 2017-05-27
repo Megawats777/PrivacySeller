@@ -55,22 +55,27 @@ function answerQuestion(answerType, questionNum)
         {
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
+                document.getElementById("q1ResultText").style.textAlign="left";
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[0];
+                document.getElementById("q2ResultText").style.textAlign="left";
                 break;
             
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[0];
+                document.getElementById("q3ResultText").style.textAlign="left";
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[0];
+                document.getElementById("q4ResultText").style.textAlign="left";
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[0];
+                document.getElementById("q5ResultText").style.textAlign="left";
                 break;
         }
     }
@@ -83,22 +88,27 @@ function answerQuestion(answerType, questionNum)
         {
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
+                document.getElementById("q1ResultText").style.textAlign="left";
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
+                document.getElementById("q2ResultText").style.textAlign="left";
                 break;
             
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
+                document.getElementById("q3ResultText").style.textAlign="left";
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
+                document.getElementById("q4ResultText").style.textAlign="left";
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
+                document.getElementById("q5ResultText").style.textAlign="left";
                 break;
         }
     }
