@@ -67,6 +67,7 @@
 
 .CreditsSection .ExitButton button
 {
+    font-family: 'Khula', sans-serif;
     font-size: 30px;
     width: 30%;
 }
