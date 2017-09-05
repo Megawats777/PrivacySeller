@@ -44,7 +44,13 @@ question5Results[1] = "Arcia turns to Ragal Media for video content. You did not
 // Question navigation points
 var questionNavigationPoints = new Array(5);
 
-
+// Get document references
+function getDocumentReferences()
+{
+    // Get question navigation point references
+    questionNavigationPoints[0] = Document.getElementById("questionNavPoint_01");
+    alert(questionNavigationPoints[0]);
+}
 
 
 // Answer a question
@@ -123,7 +129,11 @@ function answerQuestion(answerType, questionNum)
 // Param 1: destination(The question you want to navigate to)
 function transitionToQuestion(destination)
 {
+    // Depending on the question given transition to a specific question
+    switch(destination)
+    {
 
+    }
 }
 
 
