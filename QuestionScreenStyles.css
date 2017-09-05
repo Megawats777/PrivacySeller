@@ -85,6 +85,27 @@
     text-align: center;
 }
 
+.Question #continueButton
+{
+    font-family: 'Khula', sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    margin-top: 20px;
+    
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; 
+}
+
+.Question #continueButton:hover
+{
+    box-shadow: 2px 3px 1px rgba(0, 0, 1, 0.5);
+    color: white;
+    background-color: green;
+
+    font-size: 22px;
+}
+
 .CreditsSection .ExitButton
 {
     text-align: center;
