@@ -41,6 +41,11 @@ question5Results[0] = "You transferred 50% of your video content to Arcia. Arcia
 question5Results[1] = "Arcia turns to Ragal Media for video content. You did not make any losses. No further action is required.";
 
 
+// Question navigation points
+var questionNavigationPoints = new Array(5);
+
+
+
 
 // Answer a question
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
@@ -114,5 +119,11 @@ function answerQuestion(answerType, questionNum)
     }
 }
 
+// Transition to question
+// Param 1: destination(The question you want to navigate to)
+function transitionToQuestion(destination)
+{
+
+}
 
 
