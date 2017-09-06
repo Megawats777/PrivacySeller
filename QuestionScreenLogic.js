@@ -48,8 +48,11 @@ var questionNavigationPoints = new Array(5);
 function getDocumentReferences()
 {
     // Get question navigation point references
-    questionNavigationPoints[0] = Document.getElementById("questionNavPoint_01");
-    alert(questionNavigationPoints[0]);
+    questionNavigationPoints[0] = document.getElementById("questionNavPoint_01");
+    questionNavigationPoints[1] = document.getElementById("questionNavPoint_02");
+    questionNavigationPoints[2] = document.getElementById("questionNavPoint_03");
+    questionNavigationPoints[3] = document.getElementById("questionNavPoint_04");
+    questionNavigationPoints[4] = document.getElementById("questionNavPoint_05");
 }
 
 
@@ -130,10 +133,7 @@ function answerQuestion(answerType, questionNum)
 function transitionToQuestion(destination)
 {
     // Depending on the question given transition to a specific question
-    switch(destination)
-    {
-
-    }
+    questionNavigationPoints[destination - 1].scrollIntoView();
 }
 
 
