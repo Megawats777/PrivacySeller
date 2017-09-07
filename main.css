@@ -33,7 +33,7 @@
     padding-bottom: 180px;
 }
 
-.StartButton a button
+.StartButton button
 {
     -webkit-transition: all 0.35s cubic-bezier(.26,.99,.82,.9);
     transition: all 0.35s cubic-bezier(.26,.99,.82,.9);
@@ -46,7 +46,7 @@
     width: 30%; 
 }
 
-.StartButton a button:hover
+.StartButton button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
     background-color: #0091EA;
