@@ -8,6 +8,23 @@
     padding-bottom: 60px;
 }
 
+.CustomNameTextFieldSection
+{
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+}
+
+.CustomNameTextFieldSection #customNameTitle
+{
+    margin-bottom: 10px;
+}
+
+.CustomNameTextFieldSection #customNameTextField
+{
+    font-size: 18px;
+    margin-bottom: 90px;
+}
+
 .StartButton
 {
     margin: 0;
