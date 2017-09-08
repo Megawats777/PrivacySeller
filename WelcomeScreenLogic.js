@@ -28,5 +28,9 @@ function initializePage()
 function nameTextFieldInputHandle(event)
 {
     event.preventDefault();
-    startGame();
+
+    if (event.keyCode == 13)
+    {
+        startGame();
+    }
 }
