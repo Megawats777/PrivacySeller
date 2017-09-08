@@ -11,7 +11,7 @@
   <script src="WelcomeScreenLogic.js"></script>
 </head>
 
-<body>
+<body onload="initializePage()">
 
   <!--Title-->
   <div class="Title">
@@ -28,8 +28,8 @@
 
       <div class="col-md-4">
         <h3 id="customNameTitle">What is your name CEO?</h3>
-        <form>
-          <br><input id="customNameTextField" type="text" maxLength = "15" onkeydown="return startGame()"></br>
+        <form action="#" onsubmit="nameTextFieldInputHandle">
+          <br><input id="customNameTextField" type="text" maxLength = "15"></br>
         </form>
       </div>
 
