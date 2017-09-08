@@ -69,7 +69,7 @@ function setWelcomeTextContent() {
     var welcomeText = document.getElementById("welcomeText");
 
     // Set the welcome text to include the saved CEO name
-    welcomeText.innerHTML = "Welcome..." + sessionStorage.getItem("SavedCEOName");
+    welcomeText.innerHTML = "Welcome... " + sessionStorage.getItem("SavedCEOName");
 }
 
 // Answer a question

@@ -21,6 +21,7 @@ function startGame()
 function initializePage()
 {
     customNameTextField = document.getElementById("customNameTextField");
+    customNameTextField.value = "";
 }
 
 // Custom name text field input handle
