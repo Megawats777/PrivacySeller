@@ -11,6 +11,13 @@
     font-size: 25px;
 }
 
+.SectionTitle h2
+{
+    text-align: right;
+    font-family: 'Khula', sans-serif;
+    font-size: 20px;   
+}
+
 .Question
 {
     padding-top: 20px;

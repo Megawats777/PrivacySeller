@@ -4,18 +4,41 @@
 <head>
   <title>Welcome</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="icon" href="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"/>
+  <link rel="icon" href="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"
+  />
   <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
+  <script src="WelcomeScreenLogic.js"></script>
 </head>
 
-<body>
+<body onload="initializePage()">
 
   <!--Title-->
   <div class="Title">
     <h1>Privacy Seller</h1>
   </div>
   <!--Title End-->
+
+  <!--Custom name text field section-->
+  <div class="CustomNameTextFieldSection">
+    <div class="row">
+
+      <div class="col-md-4">
+      </div>
+
+      <div class="col-md-4">
+        <h3 id="customNameTitle">What is your name CEO?</h3>
+        <form action="#" onsubmit="nameTextFieldInputHandle(event)" required="true">
+          <br><input id="customNameTextField" type="text" maxLength = "15"></br>
+        </form>
+      </div>
+
+      <div class="col-md-4">
+      </div>
+
+    </div>
+  </div>
+  <!--Custom name text field section end-->
 
   <!--Start Button-->
   <div class="StartButton">
@@ -26,7 +49,7 @@
         </div>
 
         <div class="col-md-4">
-          <a href="QuestionScreen.html"><button class="btn btn-default">Start</button></a>
+          <button class="btn btn-default" onclick="startGame()">Start</button>
         </div>
 
         <div class="col-md-4">
@@ -50,15 +73,15 @@
         </div>
 
         <div class="CompanyLogo">
-          <img src="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"/>
+          <img src="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"
+          />
         </div>
 
         <div class="TutorialText">
-          <p>You are the CEO of Reposit. The leading online storage service in the city of Voltavia. 
-            Your servers store documents such as photos, videos, as well as valuable data such as medical records. 
-            The information you store is valuable and every one the city knows it. 
-            A common occurrence as CEO is to either authorize or deny any data transfer offers given to you. 
-            Now that the introductions are out of the way……..welcome CEO.</p>
+          <p>You are the CEO of Reposit. The leading online storage service in the city of Voltavia. Your servers store documents
+            such as photos, videos, as well as valuable data such as medical records. The information you store is valuable
+            and every one the city knows it. A common occurrence as CEO is to either authorize or deny any data transfer
+            offers given to you. Now that the introductions are out of the way……..welcome CEO.</p>
         </div>
 
       </div>
