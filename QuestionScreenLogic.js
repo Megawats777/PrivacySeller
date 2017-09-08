@@ -45,7 +45,8 @@ question5Results[1] = "Arcia turns to Ragal Media for video content. You did not
 var questionNavigationPoints = new Array(5);
 
 // Initialize the page
-function initializePage() {
+function initializePage() 
+{
     // Get document references    
     getDocumentReferences();
 
@@ -55,7 +56,8 @@ function initializePage() {
 
 
 // Get document references
-function getDocumentReferences() {
+function getDocumentReferences() 
+{
     // Get question navigation point references
     questionNavigationPoints[0] = document.getElementById("questionNavPoint_01");
     questionNavigationPoints[1] = document.getElementById("questionNavPoint_02");
@@ -75,11 +77,14 @@ function setWelcomeTextContent() {
 // Answer a question
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
 // Param 2: questionNum (The question player is answering)
-function answerQuestion(answerType, questionNum) {
+function answerQuestion(answerType, questionNum) 
+{
     // If the answer type is authorized
-    if (answerType === 0) {
+    if (answerType === 0) 
+    {
         // Depending of the quesiton show the appropriate result
-        switch (questionNum) {
+        switch (questionNum) 
+        {
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
                 document.getElementById("q1ResultText").style.textAlign = "left";
@@ -141,7 +146,8 @@ function answerQuestion(answerType, questionNum) {
 
 // Transition to question
 // Param 1: destination(The question you want to navigate to)
-function transitionToQuestion(destination) {
+function transitionToQuestion(destination) 
+{
     // Depending on the question given transition to a specific question
     questionNavigationPoints[destination - 1].scrollIntoView();
 }
