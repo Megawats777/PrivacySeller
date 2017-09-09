@@ -12,6 +12,81 @@
     font-size: 50px;
 }
 
+.GameSummarySection
+{
+    padding-top: 20px;
+    font-family: 'Khula', sans-serif;
+
+    border-bottom: black 1px solid;
+
+    -webkit-transition: all 0.25s cubic-bezier(.52,.91,.72,.99);
+    transition: all 0.25s cubic-bezier(.52,.91,.72,.99);
+}
+
+.GameSummarySection:hover
+{
+    padding-bottom: 95px;   
+}
+
+
+.GameSummarySection #GameSummaryTitle
+{
+    font-size: 25px;
+    text-align: center;
+}
+
+.GameSummarySection #offerNumberText
+{
+    text-align: left;
+}
+
+/*--Offer Answer text styling properties--*/
+
+.GameSummarySection #offer1Answer
+{
+    text-align: right;
+}
+
+.GameSummarySection #offer2Answer
+{
+    text-align: right;
+}
+
+.GameSummarySection #offer3Answer
+{
+    text-align: right;
+}
+
+.GameSummarySection #offer4Answer
+{
+    text-align: right;
+}
+
+.GameSummarySection #offer5Answer
+{
+    text-align: right;
+}
+
+/*--Offer Answer text styling properties end--*/
+
+.GameSummarySection .ResultsTable
+{
+    font-size: 16px;
+
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    line-height: 40px;
+}
+
+.GameSummarySection .ResultTableHoverTrigger
+{
+    background-color: green;
+}
+
 .HomeScreenButton
 {
     text-align: center;
@@ -21,8 +96,9 @@
 
 .HomeScreenButton button
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    -webkit-transition: all 0.4s cubic-bezier(.14,.76,.36,.96);
+    transition: all 0.4s cubic-bezier(.14,.76,.36,.96);
+
     font-family: 'khula', sans-serif;
     font-size: 20px;
     width: 45%;
@@ -33,6 +109,9 @@
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
     background-color: #2196F3;
     color: white;
+
+    font-size: 28px;
+    width: 60%;
 }
 
 .CreditsText

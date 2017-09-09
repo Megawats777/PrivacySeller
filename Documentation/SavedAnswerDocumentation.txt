@@ -1,0 +1,6 @@
+    Indicators that say what each value means in the save status of a answer
+--------------------------------------------------------------------------------
+
+n = Not Answered
+a = Authorized
+d = Denied

@@ -45,19 +45,22 @@ question5Results[1] = "Arcia turns to Ragal Media for video content. You did not
 var questionNavigationPoints = new Array(5);
 
 // Initialize the page
-function initializePage() 
-{
+function initializePage() {
+    
     // Get document references    
     getDocumentReferences();
 
     // Set welcome text content
     setWelcomeTextContent();
+
+    // Reset saved question answers
+    resetSavedQuestionAnswers();
 }
 
 
 // Get document references
-function getDocumentReferences() 
-{
+function getDocumentReferences() {
+
     // Get question navigation point references
     questionNavigationPoints[0] = document.getElementById("questionNavPoint_01");
     questionNavigationPoints[1] = document.getElementById("questionNavPoint_02");
@@ -68,77 +71,113 @@ function getDocumentReferences()
 
 // Set welcome text content
 function setWelcomeTextContent() {
+
     var welcomeText = document.getElementById("welcomeText");
 
     // Set the welcome text to include the saved CEO name
     welcomeText.innerHTML = "Welcome... " + sessionStorage.getItem("SavedCEOName");
 }
 
+// Reset saved question answers
+function resetSavedQuestionAnswers() {
+
+    sessionStorage.setItem("q1SavedAnswer", "n");
+    sessionStorage.setItem("q2SavedAnswer", "n");
+    sessionStorage.setItem("q3SavedAnswer", "n");
+    sessionStorage.setItem("q4SavedAnswer", "n");
+    sessionStorage.setItem("q5SavedAnswer", "n");
+
+}
+
+
 // Answer a question
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
 // Param 2: questionNum (The question player is answering)
-function answerQuestion(answerType, questionNum) 
-{
+function answerQuestion(answerType, questionNum) {
+
     // If the answer type is authorized
-    if (answerType === 0) 
-    {
+    if (answerType === 0) {
+
         // Depending of the quesiton show the appropriate result
-        switch (questionNum) 
-        {
+        // Saved the answer of the appropriate result
+        switch (questionNum) {
+
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
                 document.getElementById("q1ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q1SavedAnswer", "a");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[0];
                 document.getElementById("q2ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q2SavedAnswer", "a");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[0];
                 document.getElementById("q3ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q3SavedAnswer", "a");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[0];
                 document.getElementById("q4ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q4SavedAnswer", "a");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[0];
                 document.getElementById("q5ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q5SavedAnswer", "a");
                 break;
         }
     }
 
     // If the answer type is denied
     else if (answerType === 1) {
+
         // Depending of the quesiton show the appropriate result
         switch (questionNum) {
+
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
                 document.getElementById("q1ResultText").style.textAlign = "left";
+                
+                sessionStorage.setItem("q1SavedAnswer", "d");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
                 document.getElementById("q2ResultText").style.textAlign = "left";
+                
+                sessionStorage.setItem("q2SavedAnswer", "d");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
                 document.getElementById("q3ResultText").style.textAlign = "left";
+                
+                sessionStorage.setItem("q3SavedAnswer", "d");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
                 document.getElementById("q4ResultText").style.textAlign = "left";
+                
+                sessionStorage.setItem("q4SavedAnswer", "d");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
                 document.getElementById("q5ResultText").style.textAlign = "left";
+                
+                sessionStorage.setItem("q5SavedAnswer", "d");
                 break;
         }
     }
@@ -146,8 +185,7 @@ function answerQuestion(answerType, questionNum)
 
 // Transition to question
 // Param 1: destination(The question you want to navigate to)
-function transitionToQuestion(destination) 
-{
+function transitionToQuestion(destination) {
     // Depending on the question given transition to a specific question
     questionNavigationPoints[destination - 1].scrollIntoView();
 }
