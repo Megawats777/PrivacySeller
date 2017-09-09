@@ -46,6 +46,7 @@ var questionNavigationPoints = new Array(5);
 
 // Initialize the page
 function initializePage() {
+    
     // Get document references    
     getDocumentReferences();
 
@@ -80,11 +81,11 @@ function setWelcomeTextContent() {
 // Reset saved question answers
 function resetSavedQuestionAnswers() {
 
-    sessionStorage.setItem("q1SavedAnswer", 0);
-    sessionStorage.setItem("q2SavedAnswer", 0);
-    sessionStorage.setItem("q3SavedAnswer", 0);
-    sessionStorage.setItem("q4SavedAnswer", 0);
-    sessionStorage.setItem("q5SavedAnswer", 0);
+    sessionStorage.setItem("q1SavedAnswer", "n");
+    sessionStorage.setItem("q2SavedAnswer", "n");
+    sessionStorage.setItem("q3SavedAnswer", "n");
+    sessionStorage.setItem("q4SavedAnswer", "n");
+    sessionStorage.setItem("q5SavedAnswer", "n");
 
 }
 
@@ -105,35 +106,35 @@ function answerQuestion(answerType, questionNum) {
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
                 document.getElementById("q1ResultText").style.textAlign = "left";
 
-                sessionStorage.setItem("q1SavedAnswer", 1);
+                sessionStorage.setItem("q1SavedAnswer", "a");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[0];
                 document.getElementById("q2ResultText").style.textAlign = "left";
 
-                sessionStorage.setItem("q2SavedAnswer", 1);
+                sessionStorage.setItem("q2SavedAnswer", "a");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[0];
                 document.getElementById("q3ResultText").style.textAlign = "left";
 
-                sessionStorage.setItem("q3SavedAnswer", 1);
+                sessionStorage.setItem("q3SavedAnswer", "a");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[0];
                 document.getElementById("q4ResultText").style.textAlign = "left";
 
-                sessionStorage.setItem("q4SavedAnswer", 1);
+                sessionStorage.setItem("q4SavedAnswer", "a");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[0];
                 document.getElementById("q5ResultText").style.textAlign = "left";
 
-                sessionStorage.setItem("q5SavedAnswer", 1);
+                sessionStorage.setItem("q5SavedAnswer", "a");
                 break;
         }
     }
@@ -148,35 +149,35 @@ function answerQuestion(answerType, questionNum) {
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
                 document.getElementById("q1ResultText").style.textAlign = "left";
                 
-                sessionStorage.setItem("q1SavedAnswer", 2);
+                sessionStorage.setItem("q1SavedAnswer", "d");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
                 document.getElementById("q2ResultText").style.textAlign = "left";
                 
-                sessionStorage.setItem("q2SavedAnswer", 2);
+                sessionStorage.setItem("q2SavedAnswer", "d");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
                 document.getElementById("q3ResultText").style.textAlign = "left";
                 
-                sessionStorage.setItem("q3SavedAnswer", 2);
+                sessionStorage.setItem("q3SavedAnswer", "d");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
                 document.getElementById("q4ResultText").style.textAlign = "left";
                 
-                sessionStorage.setItem("q4SavedAnswer", 2);
+                sessionStorage.setItem("q4SavedAnswer", "d");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
                 document.getElementById("q5ResultText").style.textAlign = "left";
                 
-                sessionStorage.setItem("q5SavedAnswer", 2);
+                sessionStorage.setItem("q5SavedAnswer", "d");
                 break;
         }
     }
