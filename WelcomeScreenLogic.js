@@ -5,8 +5,8 @@
 var customNameTextField;
 
 // Start the game
-function startGame()
-{
+function startGame() {
+    
     var nameTextFieldString = document.getElementById("customNameTextField").value;
 
     // Save the selected user name
@@ -18,19 +18,17 @@ function startGame()
 
 
 // Initialize the page
-function initializePage()
-{
+function initializePage() {
+
     customNameTextField = document.getElementById("customNameTextField");
     customNameTextField.value = "";
 }
 
 // Custom name text field input handle
-function nameTextFieldInputHandle(event)
-{
+function nameTextFieldInputHandle(event) {
     event.preventDefault();
 
-    if (event.keyCode == 13)
-    {
+    if (event.keyCode == 13) {
         startGame();
     }
 }
