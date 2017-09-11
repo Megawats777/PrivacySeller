@@ -19,13 +19,13 @@
 
     border-bottom: black 1px solid;
 
-    -webkit-transition: all 0.25s cubic-bezier(.52,.91,.72,.99);
-    transition: all 0.25s cubic-bezier(.52,.91,.72,.99);
+    -webkit-transition: all 0.3s cubic-bezier(.51,.89,.62,.91);
+    transition: all 0.3s cubic-bezier(.51,.89,.62,.91);
 }
 
 .GameSummarySection:hover
 {
-    padding-bottom: 95px;   
+    padding-bottom: 97px;   
 }
 
 
