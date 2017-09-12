@@ -43,6 +43,14 @@
     font-weight: bold;
 }
 
+.GameSummarySection .ResultsTable #TableTitleResult
+{
+    text-align: center;
+
+    padding-left: 50px;
+    font-weight: bold;
+}
+
 .GameSummarySection #offerNumberText
 {
     text-align: center;
@@ -53,26 +61,31 @@
 .GameSummarySection #offer1Answer
 {
     text-align: center;
+    padding-left: 50px;
 }
 
 .GameSummarySection #offer2Answer
 {
     text-align: center;
+    padding-left: 50px;
 }
 
 .GameSummarySection #offer3Answer
 {
     text-align: center;
+    padding-left: 50px;
 }
 
 .GameSummarySection #offer4Answer
 {
     text-align: center;
+    padding-left: 50px;
 }
 
 .GameSummarySection #offer5Answer
 {
     text-align: center;
+    padding-left: 50px;
 }
 
 /*--Offer Answer text styling properties end--*/
@@ -107,8 +120,8 @@
     text-align: center;
 }
 
-
 /*--Offer Rep result text stylling properties end--*/
+
 
 .GameSummarySection .ResultsTable
 {
@@ -128,6 +141,16 @@
 .GameSummarySection .ResultTableHoverTrigger
 {
     background-color: green;
+}
+
+.GameSummarySection #rankText
+{
+    text-align: center;
+}
+
+.GameSummarySection #repTotalText
+{
+    text-align: center;
 }
 
 .HomeScreenButton
