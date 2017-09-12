@@ -3,8 +3,8 @@
 // The offer answer text elements
 var offerAnswerTextElements = new Array(5);
 
-
-
+// The player's reputation
+var playerReputation = 0;
 
 // Initialize the page
 function initializePage() {
