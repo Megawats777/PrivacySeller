@@ -14,17 +14,19 @@
 
 .GameSummarySection
 {
-    padding-top: 20px;
+    padding-top: 5px;
     font-family: 'Khula', sans-serif;
 
     border-bottom: black 1px solid;
 
-    -webkit-transition: all 0.3s cubic-bezier(.51,.89,.62,.91);
-    transition: all 0.3s cubic-bezier(.51,.89,.62,.91);
+    -webkit-transition: all 0.3s cubic-bezier(.04,.95,.62,.95);
+    transition: all 0.3s cubic-bezier(.04,.95,.62,.95);
+
 }
 
 .GameSummarySection:hover
 {
+    padding-top: 40px;
     padding-bottom: 97px;   
 }
 
@@ -35,9 +37,15 @@
     text-align: center;
 }
 
+.GameSummarySection .ResultsTable #TableTitle
+{
+    text-align: center;
+    font-weight: bold;
+}
+
 .GameSummarySection #offerNumberText
 {
-    text-align: left;
+    text-align: center;
 }
 
 /*--Offer Answer text styling properties--*/
@@ -69,6 +77,39 @@
 
 /*--Offer Answer text styling properties end--*/
 
+
+
+
+/*--Offer Rep result text stylling properties--*/
+
+.GameSummarySection #offer1RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer2RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer3RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer4RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer5RepResult
+{
+    text-align: center;
+}
+
+
+/*--Offer Rep result text stylling properties end--*/
+
 .GameSummarySection .ResultsTable
 {
     font-size: 16px;
@@ -79,7 +120,9 @@
     padding-left: 15px;
     padding-right: 15px;
 
+
     line-height: 40px;
+
 }
 
 .GameSummarySection .ResultTableHoverTrigger
