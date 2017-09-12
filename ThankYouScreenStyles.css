@@ -146,11 +146,14 @@
 .GameSummarySection #rankText
 {
     text-align: center;
+    font-size: 16px;
 }
 
 .GameSummarySection #repTotalText
 {
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .HomeScreenButton

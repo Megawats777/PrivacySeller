@@ -6,6 +6,12 @@ var offerAnswerTextElements = new Array(5);
 // The player's reputation
 var playerReputation = 0;
 
+// The reputation increase value
+var repIncreaseValue = 5;
+
+// The reputation decrease value
+var repDecreaseValue = -5;
+
 // Initialize the page
 function initializePage() {
 
@@ -33,7 +39,7 @@ function setTheAnswerTextContent() {
 
     for (var i = 0; i < offerAnswerTextElements.length; i++) {
 
-        var currentAnswerResult = sessionStorage.getItem("q" + (i + 1)  + "SavedAnswer");
+        var currentAnswerResult = sessionStorage.getItem("q" + (i + 1) + "SavedAnswer");
 
         // Depending on the current answer set the content of the current answer text element
         if (currentAnswerResult === "n" || currentAnswerResult === null) {
@@ -50,6 +56,17 @@ function setTheAnswerTextContent() {
 
             offerAnswerTextElements[i].innerHTML = "Denied";
         }
-        
+
     }
+}
+
+// Set the player's reputation
+function setPlayerReputation() {
+    // Check the first offer
+
+    // If the first offer was not answered
+
+        // Set the text of the offer1RepResult element to be 0
+
+        // Do not add to the player's reputation
 }
