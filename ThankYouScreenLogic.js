@@ -71,45 +71,48 @@ function setTheAnswerTextContent() {
 function setPlayerReputation() {
 
     // Check the first offer
-    checkFirstOption();
+    checkOffer(1, -2, -5);
 }
 
 // Check the first offer
-function checkFirstOption() {
+// PARAM 1: The question number you want to check
+// PARAM 2: The rep value when the offer is authorized
+// PARAM 3: The rep value when the offer is denied
+function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepValue) {
 
     // Result rep values
-    var authorizedRepValue = -5;
-    var deniedRepValue = -2;
+    var authorizedRepValue = questionAuthorizedRepValue;
+    var deniedRepValue = questionDeniedRepValue;
 
-    // If the first offer was not answered
+    // If the offer was not answered
     if (sessionStorage.getItem("q1SavedAnswer") === "n" || sessionStorage.getItem("q1SavedAnswer") === null) {
 
-        // Set the text of the offer1RepResult element to be 0
-        repResultTextElements[0].innerHTML = "0";
+        // Set the text of the selected question rep result element to be 0
+        repResultTextElements[(questionNum - 1)].innerHTML = "0";
 
     }
 
-    // If the first offer was answered
+    // If the offer was answered
     if (sessionStorage.getItem("q1SavedAnswer") !== "n") {
 
-        // If the first offer was authorized
+        // If the offer was authorized
         if (sessionStorage.getItem("q1SavedAnswer") === "a") {
 
-            // Remove 5 points from the player's reputation
+            // Add to the player's reputation based on the authorized rep value
             playerReputation += authorizedRepValue;
 
-            // Set the text of the offer1RepResult element to be -5
-            repResultTextElements[0].innerHTML = "-5";
+            // Set the text of the of the selected rep result element to be the same as the authorized rep value
+            repResultTextElements[(questionNum - 1)].innerHTML = authorizedRepValue;
         }
 
-        // If the first offer was denied
+        // If the offer was denied
         if (sessionStorage.getItem("q1SavedAnswer") === "d") {
 
-            // Remove 2 points from the player's reputation
-            playerReputation -= deniedRepValue;
+            // Add to the player's reputation based on the denied rep value
+            playerReputation += deniedRepValue;
 
-            // Set the text of the offer1RepResult element to be the denied rep value 
-            repResultTextElements[0].innerHTML = "-2";
+            // Set the text of the selected question rep result element to be the same as the denied rep value 
+            repResultTextElements[(questionNum - 1)].innerHTML = deniedRepValue;
         }
 
     }
