@@ -166,6 +166,19 @@ function calculatePlayerRank() {
         playerRank = "Random CEO";
     }
 
+    // If the player's rep value is less than 0
+    // Set the their rank to be "Jerk CEO"
+    else if (playerReputation < 0) {
+        playerRank = "Jerk CEO";
+    }
+
+    // If the player's rep value is greater than 0
+    // Set their rank to be "Respectable CEO"
+    else if (playerReputation > 0) {
+        playerRank = "Respectable CEO";
+    }
+
+
     // Display the player's rank
     document.getElementById("rankText").innerHTML = "Rank: " + playerRank;
 
