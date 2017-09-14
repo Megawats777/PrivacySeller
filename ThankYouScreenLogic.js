@@ -21,6 +21,9 @@ function initializePage() {
 
     // Set the player's reputation
     setPlayerReputation();
+
+    // Display total player reputation
+    document.getElementById("repTotalText").innerHTML = "Rep Total: " + playerReputation;
 }
 
 // Get document references
@@ -71,19 +74,19 @@ function setTheAnswerTextContent() {
 function setPlayerReputation() {
 
     // Check the first offer
-    checkOffer(1, -2, -5);
+    checkOffer(1, -20, -50);
 
     // Check the second offer
-    checkOffer(2, -5, 5);
+    checkOffer(2, -50, 50);
 
     // Check the third offer
-    checkOffer(3, -5, 2);
+    checkOffer(3, -50, 20);
 
     // Check the fourth offer
-    checkOffer(4, 5, 2);
+    checkOffer(4, 50, 20);
 
     // Check the fifth offer
-    checkOffer(5, -5, 2);
+    checkOffer(5, -50, 20);
 }
 
 // Check the first offer
