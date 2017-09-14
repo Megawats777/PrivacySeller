@@ -9,6 +9,8 @@ var repResultTextElements = new Array(5);
 // The player's reputation
 var playerReputation = 0;
 
+// The player's rank
+var playerRank;
 
 // Initialize the page
 function initializePage() {
@@ -24,6 +26,9 @@ function initializePage() {
 
     // Display total player reputation
     document.getElementById("repTotalText").innerHTML = "Rep Total: " + playerReputation;
+
+    // Calculate player rank
+    calculatePlayerRank();
 }
 
 // Get document references
@@ -150,4 +155,18 @@ function getRepResultText(repValue) {
     }
 
     return finalText;
+}
+
+// Calculate player rank
+function calculatePlayerRank() {
+
+    // If the player's rep value is equal to 0
+    // Set their rank to be "Random CEO"
+    if (playerReputation === 0) {
+        playerRank = "Random CEO";
+    }
+
+    // Display the player's rank
+    document.getElementById("rankText").innerHTML = "Rank: " + playerRank;
+
 }
