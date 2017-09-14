@@ -105,7 +105,7 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
     }
 
     // If the offer was answered
-    if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") !== "n") {
+    else if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") !== "n") {
 
         // If the offer was authorized
         if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "a") {
@@ -114,7 +114,7 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
             playerReputation += authorizedRepValue;
 
             // Set the text of the of the selected rep result element to be the same as the authorized rep value
-            repResultTextElements[(questionNum - 1)].innerHTML = authorizedRepValue;
+            repResultTextElements[(questionNum - 1)].innerHTML = getRepResultText(authorizedRepValue);
         }
 
         // If the offer was denied
@@ -124,8 +124,27 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
             playerReputation += deniedRepValue;
 
             // Set the text of the selected question rep result element to be the same as the denied rep value 
-            repResultTextElements[(questionNum - 1)].innerHTML = deniedRepValue;
+            repResultTextElements[(questionNum - 1)].innerHTML = getRepResultText(deniedRepValue);
         }
-
     }
+}
+
+// Get rep result text
+function getRepResultText(repValue) {
+
+    var finalText;
+
+    // If the rep value passed on is greater than 0
+    // Set the final text string to be "+(repValue)"
+    if (repValue > 0) {
+        finalText = "+" + repValue;
+    }
+
+    // If the rep value passed on is less than 0
+    // Set the final text string to be just the rep value
+    else if (repValue < 0) {
+        finalText = repValue;
+    }
+
+    return finalText;
 }
