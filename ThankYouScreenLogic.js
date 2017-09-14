@@ -72,6 +72,18 @@ function setPlayerReputation() {
 
     // Check the first offer
     checkOffer(1, -2, -5);
+
+    // Check the second offer
+    checkOffer(2, -5, 5);
+
+    // Check the third offer
+    checkOffer(3, -5, 2);
+
+    // Check the fourth offer
+    checkOffer(4, 5, 2);
+
+    // Check the fifth offer
+    checkOffer(5, -5, 2);
 }
 
 // Check the first offer
@@ -85,18 +97,18 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
     var deniedRepValue = questionDeniedRepValue;
 
     // If the offer was not answered
-    if (sessionStorage.getItem("q1SavedAnswer") === "n" || sessionStorage.getItem("q1SavedAnswer") === null) {
+    if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "n" || sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === null) {
 
         // Set the text of the selected question rep result element to be 0
-        repResultTextElements[(questionNum - 1)].innerHTML = "0";
+        repResultTextElements[(questionNum - 1)].innerHTML = "No Change";
 
     }
 
     // If the offer was answered
-    if (sessionStorage.getItem("q1SavedAnswer") !== "n") {
+    if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") !== "n") {
 
         // If the offer was authorized
-        if (sessionStorage.getItem("q1SavedAnswer") === "a") {
+        if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "a") {
 
             // Add to the player's reputation based on the authorized rep value
             playerReputation += authorizedRepValue;
@@ -106,7 +118,7 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
         }
 
         // If the offer was denied
-        if (sessionStorage.getItem("q1SavedAnswer") === "d") {
+        if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "d") {
 
             // Add to the player's reputation based on the denied rep value
             playerReputation += deniedRepValue;

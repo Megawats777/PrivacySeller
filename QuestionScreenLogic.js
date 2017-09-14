@@ -28,7 +28,8 @@ question3Results[1] = "Turiel Storage became bankrupt and your relationship with
 // Index 0 is the authorized transaction result
 // Index 1 is the denied transaction result
 var question4Results = new Array(2);
-question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has not been leaked.";
+question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has been leaked. But " + 
+"your company has been praised for using your customer's information for good.";
 question4Results[1] = "Upaska is no longer able to progress with their research. However Aline Systems acquires them and Upaska is now able to continue with their research. The request to your company has been leaked. However by denying the deal you were both congratulated for rejecting the deal but were criticized by some by not lending over some of your customer’s medical records in the name of science.";
 
 
