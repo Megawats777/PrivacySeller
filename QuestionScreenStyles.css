@@ -119,6 +119,8 @@
     color: white;
     background-color: #00BFA5;
 
+    
+
     font-size: 20px;
 }
 
@@ -141,6 +143,10 @@
 .CreditsSection .ExitButton button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
+    
+    width: 50%;
+
+    font-size: 35px;
     background-color: #2196F3;
     color:white;
 }
