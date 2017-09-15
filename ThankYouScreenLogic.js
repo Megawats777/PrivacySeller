@@ -6,6 +6,9 @@ var offerAnswerTextElements = new Array(5);
 // The rep result text elements
 var repResultTextElements = new Array(5);
 
+// The CEO name text element
+var ceoNameTextElement;
+
 // The player's reputation
 var playerReputation = 0;
 
@@ -29,6 +32,9 @@ function initializePage() {
 
     // Calculate player rank
     calculatePlayerRank();
+
+    // Set the text for the ceo name text element
+    setCeoNameTextElementContent();
 }
 
 // Get document references
@@ -47,6 +53,9 @@ function getDocumentReferences() {
     repResultTextElements[2] = document.getElementById("offer3RepResult");
     repResultTextElements[3] = document.getElementById("offer4RepResult");
     repResultTextElements[4] = document.getElementById("offer5RepResult");
+
+    // Get the CEO name text element
+    ceoNameTextElement = document.getElementById("CEONameDisplayText");
 }
 
 // Set the answer text content
@@ -182,4 +191,20 @@ function calculatePlayerRank() {
     // Display the player's rank
     document.getElementById("rankText").innerHTML = "Rank: " + playerRank;
 
+}
+
+// Set the text for the ceo name text element
+function setCeoNameTextElementContent() {
+
+    // If no ceo name has been set
+    // Set the content to be "No Name"
+    if (sessionStorage.getItem("SavedCEOName") === null) {
+        ceoNameTextElement.innerHTML ="CEO: " + "No Name";
+    }
+
+    // Otherwise
+    // Set the content to be the saved CEO name
+    else {
+        ceoNameTextElement.innerHTML = "CEO: " + sessionStorage.getItem("SavedCEOName");
+    }
 }
