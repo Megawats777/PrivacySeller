@@ -1,6 +1,6 @@
 .SectionTitle
 {
-    background-color: #E0E0E0;
+    /* background-color: #E0E0E0; */
     border-bottom: black solid 2px;
 }
 
@@ -8,14 +8,14 @@
 .SectionTitle h1
 {
     font-family: 'Khula', sans-serif;
-    font-size: 25px;
+    font-size: 19px;
 }
 
 .SectionTitle h2
 {
     text-align: right;
     font-family: 'Khula', sans-serif;
-    font-size: 20px;   
+    font-size: 19px;   
 }
 
 .Question
