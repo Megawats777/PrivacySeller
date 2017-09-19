@@ -100,7 +100,7 @@ function answerQuestion(answerType, questionNum) {
     if (answerType === 0) {
 
         // Depending of the quesiton show the appropriate result
-        // Saved the answer of the appropriate result
+        // Save the answer of the appropriate result
         switch (questionNum) {
 
             case 1:
@@ -188,7 +188,8 @@ function answerQuestion(answerType, questionNum) {
 // Param 1: destination(The question you want to navigate to)
 function transitionToQuestion(destination) {
     // Depending on the question given transition to a specific question
-    questionNavigationPoints[destination - 1].scrollIntoView();
+    //questionNavigationPoints[destination - 1].scrollIntoView();
+    document.querySelector(questionNavigationPoints[destination - 1]).scrollIntoView({behavior: 'smooth'});
 }
 
 
