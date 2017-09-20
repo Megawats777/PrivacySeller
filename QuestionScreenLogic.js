@@ -28,8 +28,8 @@ question3Results[1] = "Turiel Storage became bankrupt and your relationship with
 // Index 0 is the authorized transaction result
 // Index 1 is the denied transaction result
 var question4Results = new Array(2);
-question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has been leaked. But " + 
-"your company has been praised for using your customer's information for good.";
+question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has been leaked. But " +
+    "your company has been praised for using your customer's information for good.";
 question4Results[1] = "Upaska is no longer able to progress with their research. However Aline Systems acquires them and Upaska is now able to continue with their research. The request to your company has been leaked. However by denying the deal you were both congratulated for rejecting the deal but were criticized by some by not lending over some of your customer’s medical records in the name of science.";
 
 
@@ -47,7 +47,7 @@ var questionNavigationPoints = new Array(5);
 
 // Initialize the page
 function initializePage() {
-    
+
     // Get document references    
     getDocumentReferences();
 
@@ -149,35 +149,35 @@ function answerQuestion(answerType, questionNum) {
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
                 document.getElementById("q1ResultText").style.textAlign = "left";
-                
+
                 sessionStorage.setItem("q1SavedAnswer", "d");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
                 document.getElementById("q2ResultText").style.textAlign = "left";
-                
+
                 sessionStorage.setItem("q2SavedAnswer", "d");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
                 document.getElementById("q3ResultText").style.textAlign = "left";
-                
+
                 sessionStorage.setItem("q3SavedAnswer", "d");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
                 document.getElementById("q4ResultText").style.textAlign = "left";
-                
+
                 sessionStorage.setItem("q4SavedAnswer", "d");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
                 document.getElementById("q5ResultText").style.textAlign = "left";
-                
+
                 sessionStorage.setItem("q5SavedAnswer", "d");
                 break;
         }
@@ -187,10 +187,21 @@ function answerQuestion(answerType, questionNum) {
 // Transition to question
 // Param 1: destination(The question you want to navigate to)
 function transitionToQuestion(destination) {
-    
-    
-    
-    
+
+    // Depending on the given destination
+    // Scroll to a certain nav point
+    switch (destination) {
+
+        case 2:
+            document.querySelector(".NavPoint_02").scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 3:
+            document.querySelector(".NavPoint_03").scrollIntoView({ behavior: 'smooth' });
+            break;
+
+    }
+
     // Depending on the question given transition to a specific question
     //questionNavigationPoints[destination - 1].scrollIntoView();
     //document.querySelector("." + questionNavigationPoints[destination - 1].tagName).scrollIntoView({behavior: 'smooth'});
