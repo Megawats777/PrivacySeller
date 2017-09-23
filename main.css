@@ -52,7 +52,7 @@
     background-color: #0091EA;
     color:white;
 
-    width: 70%;
+    width: 55%;
     font-size: 38px;
     
 }
@@ -84,14 +84,29 @@
 {
     padding-top: 50px;
     padding-bottom: 30px;
-    font-size: 17px;
+    
+    font-size: 15px;
     font-family: 'Khula', sans-serif;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 .CreditsSection
 {
     font-family: 'Khula', sans-serif;
     padding-top: 20px;
+    padding-bottom: 60px;
     text-align: center;
+}
+
+.CreditsSection #CreditsTitle
+{
+    font-size: 22px;
+    font-weight: bold;
+
+    padding-bottom: 16px;
+}
+
+.CreditsSection .CreditsContent
+{
+    font-size: 24px;
 }
