@@ -1,0 +1,3 @@
+--Credits Including Links--
+Company Logo Image: https://pixabay.com/en/storage-information-baggage-lockers-43981/
+Smooth Scroll Library: By: Alice Lieutire Link: https://github.com/alicelieutier/smoothScroll
