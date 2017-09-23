@@ -45,6 +45,9 @@ question5Results[1] = "Arcia turns to Ragal Media for video content. You did not
 // Question navigation points
 var questionNavigationPoints = new Array(5);
 
+// List of continue buttons
+var continueButtonList = new Array(5);
+
 // Initialize the page
 function initializePage() {
 
@@ -68,6 +71,9 @@ function getDocumentReferences() {
     questionNavigationPoints[2] = document.getElementById("questionNavPoint_03");
     questionNavigationPoints[3] = document.getElementById("questionNavPoint_04");
     questionNavigationPoints[4] = document.getElementById("questionNavPoint_05");
+
+    // Get all continue buttons
+    continueButtonList = document.getElementsByClassName("continueButtonTrigger");
 }
 
 // Set welcome text content
@@ -95,6 +101,9 @@ function resetSavedQuestionAnswers() {
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
 // Param 2: questionNum (The question player is answering)
 function answerQuestion(answerType, questionNum) {
+
+    // Unfocus the currently active element
+    document.activeElement.blur();
 
     // If the answer type is authorized
     if (answerType === 0) {
@@ -196,9 +205,8 @@ function transitionToQuestion(destination) {
     // Scroll to a certain nav point
     window.smoothScroll(questionNavigationPoints[destination -1], scrollingSpeed);
 
-    // Depending on the question given transition to a specific question
-    //questionNavigationPoints[destination - 1].scrollIntoView();
-    //document.querySelector("." + questionNavigationPoints[destination - 1].tagName).scrollIntoView({behavior: 'smooth'});
+    // Unfocus the currently focused element
+    document.activeElement.blur();
 }
 
 
