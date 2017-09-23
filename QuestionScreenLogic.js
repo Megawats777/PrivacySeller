@@ -188,19 +188,13 @@ function answerQuestion(answerType, questionNum) {
 // Param 1: destination(The question you want to navigate to)
 function transitionToQuestion(destination) {
 
+    // Scrolling speed
+    // Lower values = faster speed
+    var scrollingSpeed = 800;
+
     // Depending on the given destination
     // Scroll to a certain nav point
-    switch (destination) {
-
-        case 2:
-            document.querySelector(".NavPoint_02").scrollIntoView({ behavior: 'smooth' });
-            break;
-
-        case 3:
-            document.querySelector(".NavPoint_03").scrollIntoView({ behavior: 'smooth' });
-            break;
-
-    }
+    window.smoothScroll(questionNavigationPoints[destination -1], scrollingSpeed);
 
     // Depending on the question given transition to a specific question
     //questionNavigationPoints[destination - 1].scrollIntoView();
