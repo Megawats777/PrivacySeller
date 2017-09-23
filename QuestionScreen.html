@@ -2,15 +2,17 @@
 <html>
 
 <head>
-    <title>Offers</title>
+    <title>Privacy Seller - Offers</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" href="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"/>
     <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
     <link href="QuestionScreenStyles.css" rel="stylesheet">
     <script src="QuestionScreenLogic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="ExternalRef/smoothscroll.min.js"></script>
 </head>
 
-<body>
+<body onload="initializePage()">
     <!--Section Title-->
     <div class="SectionTitle">
         <div class="container">
@@ -21,9 +23,11 @@
                 </div>
 
                 <div class="col-md-4">
+                    
                 </div>
 
                 <div class="col-md-4">
+                    <h2 id="welcomeText">Welcome...</h2>
                 </div>
 
             </div>
@@ -34,6 +38,7 @@
     <!--Question 1-->
     <div class="Question">
         <div class="container">
+            <p id = "questionNavPoint_01" class="NavPoint_01"> </p>
             <div class="row">
                 <div class="col-md-2">
                 </div>
@@ -57,7 +62,9 @@
                     <div class="ResultText">
                         <p id="q1ResultText">Authorize or deny the offer to see the result</p>
                     </div>
-
+                    <div class="text-center">
+                        <button id="continueButton" class="btn btn-default" onClick="transitionToQuestion(2)">Continue</button>
+                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -65,12 +72,15 @@
 
             </div>
         </div>
+
+        
     </div>
     <!--Question 1 End-->
 
     <!--Question 2-->
     <div class="Question">
         <div class="container">
+            <p id = "questionNavPoint_02" class="NavPoint_02"> </p>
             <div class="row">
                 <div class="col-md-2">
                 </div>
@@ -96,6 +106,9 @@
                         <p id="q2ResultText">Authorize or deny the offer to see the result</p>
                     </div>
 
+                    <div class="text-center">
+                        <button id="continueButton" class="btn btn-default" onClick="transitionToQuestion(3)">Continue</button>
+                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -109,6 +122,7 @@
     <!--Question 3-->
     <div class="Question">
         <div class="container">
+            <p id = "questionNavPoint_03" class="NavPoint_03"> </p>
             <div class="row">
                 <div class="col-md-2">
                 </div>
@@ -133,6 +147,9 @@
                         <p id="q3ResultText">Authorize or deny the offer to see the result</p>
                     </div>
 
+                    <div class="text-center">
+                        <button id="continueButton" class="btn btn-default" onClick="transitionToQuestion(4)">Continue</button>
+                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -147,6 +164,7 @@
     <div class="Question">
         <div class="container">
             <div class="row">
+                <p id = "questionNavPoint_04" class="NavPoint_04"> </p>
                 <div class="col-md-2">
                 </div>
 
@@ -170,6 +188,9 @@
                         <p id="q4ResultText">Authorize or deny the offer to see the result</p>
                     </div>
 
+                    <div class="text-center">
+                        <button id="continueButton" class="btn btn-default" onClick="transitionToQuestion(5)">Continue</button>
+                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -183,6 +204,7 @@
     <!--Question 5-->
     <div class="Question">
         <div class="container">
+            <p id = "questionNavPoint_05" class="NavPoint_05"> </p>
             <div class="row">
                 <div class="col-md-2">
                 </div>

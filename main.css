@@ -8,6 +8,23 @@
     padding-bottom: 60px;
 }
 
+.CustomNameTextFieldSection
+{
+    font-family: 'Khula', sans-serif;
+    text-align: center;
+}
+
+.CustomNameTextFieldSection #customNameTitle
+{
+    margin-bottom: 10px;
+}
+
+.CustomNameTextFieldSection #customNameTextField
+{
+    font-size: 18px;
+    margin-bottom: 90px;
+}
+
 .StartButton
 {
     margin: 0;
@@ -16,22 +33,28 @@
     padding-bottom: 180px;
 }
 
-.StartButton a button
+.StartButton button
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    color: white;
-    background-color: #2196F3;
+    -webkit-transition: all 0.35s cubic-bezier(.26,.99,.82,.9);
+    transition: all 0.35s cubic-bezier(.26,.99,.82,.9);
+
+    background-color: white;
+    color: black;
     font-family: 'Khula', sans-serif;
-    font-size: 40px;
-    width: 50%;
+    font-size: 32px;
+    text-align: center;
+    width: 30%; 
 }
 
-.StartButton a button:hover
+.StartButton button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
-    background-color: white;
-    color:black;
+    background-color: #0091EA;
+    color:white;
+
+    width: 70%;
+    font-size: 38px;
+    
 }
 
 .AboutSection

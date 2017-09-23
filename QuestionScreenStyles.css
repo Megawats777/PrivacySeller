@@ -1,6 +1,6 @@
 .SectionTitle
 {
-    background-color: #E0E0E0;
+    /* background-color: #E0E0E0; */
     border-bottom: black solid 2px;
 }
 
@@ -8,7 +8,14 @@
 .SectionTitle h1
 {
     font-family: 'Khula', sans-serif;
-    font-size: 25px;
+    font-size: 19px;
+}
+
+.SectionTitle h2
+{
+    text-align: right;
+    font-family: 'Khula', sans-serif;
+    font-size: 19px;   
 }
 
 .Question
@@ -44,25 +51,34 @@
 .Question .ResponseButtons button
 {
     font-size: 15px;
+
+    -webkit-transition: all 0.4s cubic-bezier(.45,.03,0,1);
+    transition: all 0.4s cubic-bezier(.45,.03,0,1);
+}
+
+.Question .ResponseButtons button:hover
+{
+    font-size: 20px;
+
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .Question .ResponseButtons #authorizeButton 
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.5s;
+    
 }
 
 .Question .ResponseButtons #authorizeButton:hover
 {
     box-shadow: 2px 3px 1px rgba(0, 0, 1, 0.5);
     background-color: #039BE5;
-    color: black;
+    color: white;
 }
 
 .Question .ResponseButtons #denyButton
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.5s;
+    
 }
 
 .Question .ResponseButtons #denyButton:hover
@@ -85,6 +101,29 @@
     text-align: center;
 }
 
+.Question #continueButton
+{
+    font-family: 'Khula', sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    margin-top: 20px;
+    
+    -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
+}
+
+.Question #continueButton:hover
+{
+    box-shadow: 2px 3px 1px rgba(0, 0, 1, 0.5);
+    color: white;
+    background-color: #00BFA5;
+
+    
+
+    font-size: 20px;
+}
+
 .CreditsSection .ExitButton
 {
     text-align: center;
@@ -104,6 +143,10 @@
 .CreditsSection .ExitButton button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
+    
+    width: 50%;
+
+    font-size: 35px;
     background-color: #2196F3;
     color:white;
 }

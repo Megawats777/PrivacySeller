@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Thank You</title>
+    <title>Privacy Seller - Game Over</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="icon" href="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"/>
+    <link rel="icon" href="https://www.spreadshirt.com/image-server/v1/designs/102167132,width=178,height=178/pirandello-kruger-from-mirror-s-edge.png"
+    />
     <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
     <link href="ThankYouScreenStyles.css" rel="stylesheet">
+    <script src="ThankYouScreenLogic.js"></script>
 </head>
 
-<body>
+<body onload="initializePage()">
     <!--Thank You text-->
     <div class="ThankYouText">
         <div class="container">
@@ -17,7 +20,7 @@
                 </div>
 
                 <div class="col-md-10">
-                    <h1>Thank You for Playing!</h1>
+                    <h2>Game Over</h2>
                 </div>
 
                 <div class="col-md-1">
@@ -27,16 +30,93 @@
     </div>
     <!--Thank You text end-->
 
-    <!--Go to home screen button-->
-    <div class="HomeScreenButton">
+    <!--Game summary section-->
+    <div class="GameSummarySection">
         <div class="container">
             <div class="row">
-            
                 <div class="col-md-3">
                 </div>
 
                 <div class="col-md-6">
-                    <a href="index.html"><button class="btn btn-default">Go to home screen</button></a>
+                    <h2 id="GameSummaryTitle">Results</h2>
+                    <p id="CEONameDisplayText">CEO: John</p>
+                    
+                    <div class="ResultsTable">
+                        <table style="width:100%">
+                            <!--Tables titles-->
+                            <tr>
+                                <td id="TableTitle">Offer #</td>
+                                <td id="TableTitleResult">Result</td>
+                                <td id="TableTitle">Reputation</td>
+                            </tr>
+                            <!--Tables titles end-->
+
+                            <!--Offer 1 Results-->
+                            <tr>
+                                <td id="offerNumberText">1</td>
+                                <td id="offer1Answer">Authorized</td>
+                                <td id="offer1RepResult">+5</td>
+                            </tr>
+                            <!--Offer 1 Results end-->
+
+                            <!--Offer 2 Results-->
+                            <tr>
+                                <td id="offerNumberText">2</td>
+                                <td id="offer2Answer">Authorized</td>
+                                <td id="offer2RepResult">+5</td>
+                            </tr>
+                            <!--Offer 2 Results end-->
+
+                            <!--Offer 3 Results-->
+                            <tr>
+                                <td id="offerNumberText">3</td>
+                                <td id="offer3Answer">Authorized</td>
+                                <td id="offer3RepResult">+5</td>
+                            </tr>
+                            <!--Offer 3 Results end-->
+
+                            <!--Offer 4 Results-->
+                            <tr>
+                                <td id="offerNumberText">4</td>
+                                <td id="offer4Answer">Authorized</td>
+                                <td id="offer4RepResult">+5</td>
+                            </tr>
+                            <!--Offer 4 Results end-->
+
+                            <!--Offer 5 Results-->
+                            <tr>
+                                <td id="offerNumberText">5</td>
+                                <td id="offer5Answer">Authorized</td>
+                                <td id="offer5RepResult">+5</td>
+                            </tr>
+                            <!--Offer 5 Results end-->
+                        </table>
+                    </div>
+
+                    <p id="rankText">Rank: Respectable</p>
+                    <p id="repTotalText">Rep Total: 5000</p>
+                </div>
+
+                <div class="col-md-3">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Game summary section end-->
+
+
+    <!--Go to home screen button-->
+    <div class="HomeScreenButton">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                </div>
+
+                <div class="col-md-6">
+                    <a href="index.html" id="goHomeButton"><button class="btn btn-default">Go to home screen</button></a>
                 </div>
 
                 <div class="col-md-3">
@@ -46,12 +126,13 @@
         </div>
     </div>
     <!--Go to home screen button end-->
-    
+
+
     <!--Credits text-->
     <div class="CreditsText">
         <div class="container">
             <div class="row">
-            
+
                 <div class="col-md-3">
                 </div>
 
@@ -67,5 +148,5 @@
     </div>
     <!--Credits text end-->
 </body>
-    
+
 </html>

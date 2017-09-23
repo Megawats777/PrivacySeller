@@ -2,14 +2,165 @@
 {
     text-align: center;
     font-family: 'Khula', sans-serif;
-    padding-top: 20px;
-    padding-bottom: 35px;
+    padding-top: 5px;
+    padding-bottom: 20px;
     border-bottom: black solid 1px;
 }
 
-.ThankYouText h1
+.ThankYouText h2
 {
-    font-size: 50px;
+    font-size: 25px;
+}
+
+.GameSummarySection
+{
+    padding-top: 5px;
+    font-family: 'Khula', sans-serif;
+
+    border-bottom: black 1px solid;
+
+    -webkit-transition: all 0.3s cubic-bezier(.04,.95,.62,.95);
+    transition: all 0.3s cubic-bezier(.04,.95,.62,.95);
+
+}
+
+/* .GameSummarySection:hover
+{
+    padding-bottom: 97px;   
+} */
+
+
+.GameSummarySection #GameSummaryTitle
+{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.GameSummarySection .ResultsTable #TableTitle
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.GameSummarySection .ResultsTable #TableTitleResult
+{
+    text-align: center;
+
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.GameSummarySection #offerNumberText
+{
+    text-align: center;
+}
+
+/*--Offer Answer text styling properties--*/
+
+.GameSummarySection #offer1Answer
+{
+    text-align: center;
+    padding-left: 50px;
+}
+
+.GameSummarySection #offer2Answer
+{
+    text-align: center;
+    padding-left: 50px;
+}
+
+.GameSummarySection #offer3Answer
+{
+    text-align: center;
+    padding-left: 50px;
+}
+
+.GameSummarySection #offer4Answer
+{
+    text-align: center;
+    padding-left: 50px;
+}
+
+.GameSummarySection #offer5Answer
+{
+    text-align: center;
+    padding-left: 50px;
+}
+
+/*--Offer Answer text styling properties end--*/
+
+
+
+
+/*--Offer Rep result text stylling properties--*/
+
+.GameSummarySection #offer1RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer2RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer3RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer4RepResult
+{
+    text-align: center;
+}
+
+.GameSummarySection #offer5RepResult
+{
+    text-align: center;
+}
+
+/*--Offer Rep result text stylling properties end--*/
+
+
+.GameSummarySection .ResultsTable
+{
+    font-size: 16px;
+
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    line-height: 40px;
+
+}
+
+.GameSummarySection .ResultTableHoverTrigger
+{
+    background-color: green;
+}
+
+.GameSummarySection #rankText
+{
+    text-align: center;
+    font-size: 16px;
+}
+
+.GameSummarySection #repTotalText
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.GameSummarySection #CEONameDisplayText
+{   
+    padding-top: 5px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .HomeScreenButton
@@ -21,8 +172,9 @@
 
 .HomeScreenButton button
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    -webkit-transition: all 0.4s cubic-bezier(.14,.76,.36,.96);
+    transition: all 0.4s cubic-bezier(.14,.76,.36,.96);
+
     font-family: 'khula', sans-serif;
     font-size: 20px;
     width: 45%;
@@ -33,6 +185,9 @@
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
     background-color: #2196F3;
     color: white;
+
+    font-size: 28px;
+    width: 60%;
 }
 
 .CreditsText

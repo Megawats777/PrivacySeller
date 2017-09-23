@@ -28,7 +28,8 @@ question3Results[1] = "Turiel Storage became bankrupt and your relationship with
 // Index 0 is the authorized transaction result
 // Index 1 is the denied transaction result
 var question4Results = new Array(2);
-question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has not been leaked.";
+question4Results[0] = "You transfer 30% of your customer’s medical records to Upaska. Upaska has a breakthrough and now their medicine is being deployed around the world. The deal between you and Upaska has been leaked. But " +
+    "your company has been praised for using your customer's information for good.";
 question4Results[1] = "Upaska is no longer able to progress with their research. However Aline Systems acquires them and Upaska is now able to continue with their research. The request to your company has been leaked. However by denying the deal you were both congratulated for rejecting the deal but were criticized by some by not lending over some of your customer’s medical records in the name of science.";
 
 
@@ -41,78 +42,163 @@ question5Results[0] = "You transferred 50% of your video content to Arcia. Arcia
 question5Results[1] = "Arcia turns to Ragal Media for video content. You did not make any losses. No further action is required.";
 
 
+// Question navigation points
+var questionNavigationPoints = new Array(5);
+
+// Initialize the page
+function initializePage() {
+
+    // Get document references    
+    getDocumentReferences();
+
+    // Set welcome text content
+    setWelcomeTextContent();
+
+    // Reset saved question answers
+    resetSavedQuestionAnswers();
+}
+
+
+// Get document references
+function getDocumentReferences() {
+
+    // Get question navigation point references
+    questionNavigationPoints[0] = document.getElementById("questionNavPoint_01");
+    questionNavigationPoints[1] = document.getElementById("questionNavPoint_02");
+    questionNavigationPoints[2] = document.getElementById("questionNavPoint_03");
+    questionNavigationPoints[3] = document.getElementById("questionNavPoint_04");
+    questionNavigationPoints[4] = document.getElementById("questionNavPoint_05");
+}
+
+// Set welcome text content
+function setWelcomeTextContent() {
+
+    var welcomeText = document.getElementById("welcomeText");
+
+    // Set the welcome text to include the saved CEO name
+    welcomeText.innerHTML = "Welcome... " + sessionStorage.getItem("SavedCEOName");
+}
+
+// Reset saved question answers
+function resetSavedQuestionAnswers() {
+
+    sessionStorage.setItem("q1SavedAnswer", "n");
+    sessionStorage.setItem("q2SavedAnswer", "n");
+    sessionStorage.setItem("q3SavedAnswer", "n");
+    sessionStorage.setItem("q4SavedAnswer", "n");
+    sessionStorage.setItem("q5SavedAnswer", "n");
+
+}
+
 
 // Answer a question
 // Param 1: answerType (The type of answer given, 0 = authroized and 1 = denied)
 // Param 2: questionNum (The question player is answering)
-function answerQuestion(answerType, questionNum)
-{
+function answerQuestion(answerType, questionNum) {
+
     // If the answer type is authorized
-    if (answerType === 0)
-    {
+    if (answerType === 0) {
+
         // Depending of the quesiton show the appropriate result
-        switch(questionNum)
-        {
+        // Save the answer of the appropriate result
+        switch (questionNum) {
+
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
-                document.getElementById("q1ResultText").style.textAlign="left";
+                document.getElementById("q1ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q1SavedAnswer", "a");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[0];
-                document.getElementById("q2ResultText").style.textAlign="left";
+                document.getElementById("q2ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q2SavedAnswer", "a");
                 break;
-            
+
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[0];
-                document.getElementById("q3ResultText").style.textAlign="left";
+                document.getElementById("q3ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q3SavedAnswer", "a");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[0];
-                document.getElementById("q4ResultText").style.textAlign="left";
+                document.getElementById("q4ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q4SavedAnswer", "a");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[0];
-                document.getElementById("q5ResultText").style.textAlign="left";
+                document.getElementById("q5ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q5SavedAnswer", "a");
                 break;
         }
     }
 
     // If the answer type is denied
-    else if (answerType === 1)
-    {
+    else if (answerType === 1) {
+
         // Depending of the quesiton show the appropriate result
-        switch(questionNum)
-        {
+        switch (questionNum) {
+
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
-                document.getElementById("q1ResultText").style.textAlign="left";
+                document.getElementById("q1ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q1SavedAnswer", "d");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
-                document.getElementById("q2ResultText").style.textAlign="left";
+                document.getElementById("q2ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q2SavedAnswer", "d");
                 break;
-            
+
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
-                document.getElementById("q3ResultText").style.textAlign="left";
+                document.getElementById("q3ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q3SavedAnswer", "d");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
-                document.getElementById("q4ResultText").style.textAlign="left";
+                document.getElementById("q4ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q4SavedAnswer", "d");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
-                document.getElementById("q5ResultText").style.textAlign="left";
+                document.getElementById("q5ResultText").style.textAlign = "left";
+
+                sessionStorage.setItem("q5SavedAnswer", "d");
                 break;
         }
     }
 }
 
+// Transition to question
+// Param 1: destination(The question you want to navigate to)
+function transitionToQuestion(destination) {
+
+    // Scrolling speed
+    // Lower values = faster speed
+    var scrollingSpeed = 800;
+
+    // Depending on the given destination
+    // Scroll to a certain nav point
+    window.smoothScroll(questionNavigationPoints[destination -1], scrollingSpeed);
+
+    // Depending on the question given transition to a specific question
+    //questionNavigationPoints[destination - 1].scrollIntoView();
+    //document.querySelector("." + questionNavigationPoints[destination - 1].tagName).scrollIntoView({behavior: 'smooth'});
+}
 
 
