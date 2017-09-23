@@ -124,14 +124,14 @@
     font-size: 20px;
 }
 
-.CreditsSection .ExitButton
+.ExitButton
 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 80px;
 }
 
-.CreditsSection .ExitButton button
+.ExitButton button
 {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
@@ -140,7 +140,7 @@
     width: 30%;
 }
 
-.CreditsSection .ExitButton button:hover
+.ExitButton button:hover
 {
     box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
     
@@ -150,4 +150,12 @@
     background-color: #2196F3;
     color:white;
 }
+
+.CreditsSection
+{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
 
