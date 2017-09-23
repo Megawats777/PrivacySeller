@@ -153,9 +153,21 @@
 
 .CreditsSection
 {
+    font-family: 'Khula', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 150px;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 80px;
 }
 
+.CreditsSection #CreditsTitle
+{
+    font-size: 22px;
+    font-weight: bold;
 
+    padding-bottom: 16px;
+}
+
+.CreditsSection .CreditsContent
+{
+    font-size: 24px;
+}
