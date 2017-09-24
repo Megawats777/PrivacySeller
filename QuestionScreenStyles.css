@@ -1,5 +1,7 @@
 .SectionTitle
 {
+    padding-top: 5px;
+
     /* background-color: #E0E0E0; */
     border-bottom: black solid 2px;
 }
@@ -16,6 +18,16 @@
     text-align: right;
     font-family: 'Khula', sans-serif;
     font-size: 19px;   
+}
+
+.SectionTitle img
+{
+    padding-top: 10px;
+    padding-bottom: 18px;
+
+    display: block;
+    margin: auto;
+    width: 13%;
 }
 
 .Question
