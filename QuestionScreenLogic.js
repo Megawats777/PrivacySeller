@@ -75,6 +75,9 @@ question5Results[1] = "Arcia turns to Ragal Media for video content. You did not
 // Document element references
 var questionNavigationPoints = new Array(5);
 var continueButtonList = new Array(5);
+var pageTopElement;
+var resultTextObjects = new Array(5);
+var resultTextDefaultTextContent;
 
 // Initialize the page
 function initializePage() {
@@ -87,6 +90,9 @@ function initializePage() {
 
     // Reset saved question answers
     resetSavedQuestionAnswers();
+
+    // Get the default text for the result text objects
+    resultTextDefaultTextContent = resultTextObjects[0].innerHTML;
 }
 
 
@@ -102,6 +108,16 @@ function getDocumentReferences() {
 
     // Get all continue buttons
     continueButtonList = document.getElementsByClassName("continueButtonTrigger");
+
+    // Get the page top element
+    pageTopElement = document.getElementById("PageTopElement");
+
+    // Get the result text objects
+    resultTextObjects[0] = document.getElementById("q1ResultText");
+    resultTextObjects[1] = document.getElementById("q2ResultText");
+    resultTextObjects[2] = document.getElementById("q3ResultText");
+    resultTextObjects[3] = document.getElementById("q4ResultText");
+    resultTextObjects[4] = document.getElementById("q5ResultText");
 }
 
 // Set welcome text content
@@ -232,6 +248,29 @@ function transitionToQuestion(destination) {
     // Depending on the given destination
     // Scroll to a certain nav point
     window.smoothScroll(questionNavigationPoints[destination -1], scrollingSpeed);
+
+    // Unfocus the currently focused element
+    document.activeElement.blur();
+}
+
+// Reset the game
+function resetGame() {
+
+    // Scrolling speed
+    // Lower values = faster speed
+    var scrollingSpeed = 500;
+
+    // Scroll to the top of the page
+    window.smoothScroll(questionNavigationPoints[0], scrollingSpeed);
+
+    // Reset the result text objects to their default text content
+    for (var i = 0; i < resultTextObjects.length; i++) {
+        resultTextObjects[i].innerHTML = resultTextDefaultTextContent;
+        resultTextObjects[i].style = "text-align: center";
+    }
+
+    // Reset saved question answers
+    resetSavedQuestionAnswers();
 
     // Unfocus the currently focused element
     document.activeElement.blur();
