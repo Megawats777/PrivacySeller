@@ -171,6 +171,15 @@
     padding-bottom: 90px;
 }
 
+.HomeScreenButton img
+{
+    padding-top: 65px;
+
+    display: block;
+    margin: auto;
+    width: 20%;
+}
+
 .HomeScreenButton button
 {
     -webkit-transition: all 0.4s cubic-bezier(.14,.76,.36,.96);
