@@ -158,35 +158,35 @@ function answerQuestion(answerType, questionNum) {
 
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[0];
-                document.getElementById("q1ResultText").style.textAlign = "left";
+                document.getElementById("q1ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q1SavedAnswer", "a");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[0];
-                document.getElementById("q2ResultText").style.textAlign = "left";
+                document.getElementById("q2ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q2SavedAnswer", "a");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[0];
-                document.getElementById("q3ResultText").style.textAlign = "left";
+                document.getElementById("q3ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q3SavedAnswer", "a");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[0];
-                document.getElementById("q4ResultText").style.textAlign = "left";
+                document.getElementById("q4ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q4SavedAnswer", "a");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[0];
-                document.getElementById("q5ResultText").style.textAlign = "left";
+                document.getElementById("q5ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q5SavedAnswer", "a");
                 break;
@@ -201,35 +201,35 @@ function answerQuestion(answerType, questionNum) {
 
             case 1:
                 document.getElementById("q1ResultText").innerHTML = question1Results[1];
-                document.getElementById("q1ResultText").style.textAlign = "left";
+                document.getElementById("q1ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q1SavedAnswer", "d");
                 break;
 
             case 2:
                 document.getElementById("q2ResultText").innerHTML = question2Results[1];
-                document.getElementById("q2ResultText").style.textAlign = "left";
+                document.getElementById("q2ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q2SavedAnswer", "d");
                 break;
 
             case 3:
                 document.getElementById("q3ResultText").innerHTML = question3Results[1];
-                document.getElementById("q3ResultText").style.textAlign = "left";
+                document.getElementById("q3ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q3SavedAnswer", "d");
                 break;
 
             case 4:
                 document.getElementById("q4ResultText").innerHTML = question4Results[1];
-                document.getElementById("q4ResultText").style.textAlign = "left";
+                document.getElementById("q4ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q4SavedAnswer", "d");
                 break;
 
             case 5:
                 document.getElementById("q5ResultText").innerHTML = question5Results[1];
-                document.getElementById("q5ResultText").style.textAlign = "left";
+                document.getElementById("q5ResultText").style.textAlign = "justify";
 
                 sessionStorage.setItem("q5SavedAnswer", "d");
                 break;
