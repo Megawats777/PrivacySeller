@@ -32,7 +32,15 @@
 
 #ResetButton
 {
+    outline: none;
+
     position: fixed;
+
+    padding: 0px;
+    padding-top: 5px;
+
+    width: 50px;
+    height: 50px;
 
     bottom: 50px;
     right: 50px;
@@ -40,10 +48,9 @@
 
     font-family: 'Khula', sans-serif;
     font-size: 22px;
-    text-align: center;
 
     box-shadow: -8px 8px 6px rgba(0, 0, 1, 0.5);
-    border-radius: 12px;
+    border-radius: 50%;
     background-color: red;
     color: white;
     
