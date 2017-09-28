@@ -79,6 +79,7 @@ var pageTopElement;
 var resultTextObjects = new Array(5);
 var resultTextDefaultTextContent;
 
+
 // Initialize the page
 function initializePage() {
 
@@ -110,7 +111,7 @@ function getDocumentReferences() {
     continueButtonList = document.getElementsByClassName("continueButtonTrigger");
 
     // Get the page top element
-    pageTopElement = document.getElementById("PageTopElement");
+    pageTopElement = document.getElementById("ResetNavPoint");
 
     // Get the result text objects
     resultTextObjects[0] = document.getElementById("q1ResultText");
@@ -261,7 +262,7 @@ function resetGame() {
     var scrollingSpeed = 500;
 
     // Scroll to the top of the page
-    window.smoothScroll(questionNavigationPoints[0], scrollingSpeed);
+    window.smoothScroll(pageTopElement, scrollingSpeed);
 
     // Reset the result text objects to their default text content
     for (var i = 0; i < resultTextObjects.length; i++) {
