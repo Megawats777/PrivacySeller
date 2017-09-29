@@ -133,11 +133,16 @@ function setWelcomeTextContent() {
 // Reset saved question answers
 function resetSavedQuestionAnswers() {
 
-    sessionStorage.setItem("q1SavedAnswer", "n");
-    sessionStorage.setItem("q2SavedAnswer", "n");
-    sessionStorage.setItem("q3SavedAnswer", "n");
-    sessionStorage.setItem("q4SavedAnswer", "n");
-    sessionStorage.setItem("q5SavedAnswer", "n");
+    for (var i = 0; i < 5; i++)
+    {
+        sessionStorage.setItem("q"+ (i + 1) +"SavedAnswer", "n");    
+    }
+    
+    // sessionStorage.setItem("q1SavedAnswer", "n");
+    // sessionStorage.setItem("q2SavedAnswer", "n");
+    // sessionStorage.setItem("q3SavedAnswer", "n");
+    // sessionStorage.setItem("q4SavedAnswer", "n");
+    // sessionStorage.setItem("q5SavedAnswer", "n");
 
 }
 
