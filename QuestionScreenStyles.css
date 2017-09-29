@@ -113,21 +113,11 @@
     margin-right: 15px;
 }
 
-.Question .ResponseButtons #authorizeButton 
-{
-    
-}
-
 .Question .ResponseButtons #authorizeButton:hover
 {
     box-shadow: 2px 3px 1px rgba(0, 0, 1, 0.5);
     background-color: #039BE5;
     color: white;
-}
-
-.Question .ResponseButtons #denyButton
-{
-    
 }
 
 .Question .ResponseButtons #denyButton:hover
