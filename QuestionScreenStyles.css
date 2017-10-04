@@ -115,14 +115,14 @@
 
 .Question .ResponseButtons #authorizeButton:hover
 {
-    box-shadow: 0px 1px 10px 7px rgba(9, 164, 236, 0.5);
+    box-shadow: 0px 1px 10px 9px rgba(9, 164, 236, 0.5);
     background-color: #039BE5;
     color: white;
 }
 
 .Question .ResponseButtons #denyButton:hover
 {
-    box-shadow: 0px 1px 10px 7px rgba(218, 7, 7, 0.5);
+    box-shadow: 0px 1px 10px 9px rgba(218, 7, 7, 0.5);
     background-color: #C62828;
     color: white;
 }
@@ -172,8 +172,8 @@
 
 .ExitButton button
 {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
     font-family: 'Khula', sans-serif;
     font-size: 30px;
     width: 30%;
@@ -181,7 +181,7 @@
 
 .ExitButton button:hover
 {
-    box-shadow: 2px 5px 1px rgba(0, 0, 1, 0.5);
+    box-shadow: 0px 1px 10px 9px rgba(9, 164, 236, 0.5);
     
     width: 50%;
 
