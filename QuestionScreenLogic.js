@@ -71,6 +71,9 @@ question5Results[0] = "You transferred 50% of your video content to Arcia. Arcia
 
 question5Results[1] = "Arcia turns to Ragal Media for video content. You did not make any losses. No further action is required.";
 
+// The tooltip text to display when continue buttons are hovered
+var continueButtonTooltipText = "Continue to the next offer.";
+
 
 // Document element references
 var questionNavigationPoints = new Array(5);
@@ -94,6 +97,9 @@ function initializePage() {
 
     // Get the default text for the result text objects
     resultTextDefaultTextContent = resultTextObjects[0].innerHTML;
+
+    // Set the tooltip for the continue buttons
+    setContinueButtonTooltip();
 }
 
 
@@ -133,11 +139,10 @@ function setWelcomeTextContent() {
 // Reset saved question answers
 function resetSavedQuestionAnswers() {
 
-    for (var i = 0; i < 5; i++)
-    {
-        sessionStorage.setItem("q"+ (i + 1) +"SavedAnswer", "n");    
+    for (var i = 0; i < 5; i++) {
+        sessionStorage.setItem("q" + (i + 1) + "SavedAnswer", "n");
     }
-    
+
     // sessionStorage.setItem("q1SavedAnswer", "n");
     // sessionStorage.setItem("q2SavedAnswer", "n");
     // sessionStorage.setItem("q3SavedAnswer", "n");
@@ -293,4 +298,11 @@ function resetGame() {
     document.activeElement.blur();
 }
 
+// Set the tooltip for the continue buttons
+function setContinueButtonTooltip() {
 
+    for (var i = 0; i < continueButtonList.length; i++)
+    {
+        continueButtonList[i].title = continueButtonTooltipText;
+    }
+}
