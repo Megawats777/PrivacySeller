@@ -17,6 +17,7 @@
 .CustomNameTextFieldSection #customNameTitle
 {
     margin-bottom: 10px;
+    line-height: 33px;
 }
 
 .CustomNameTextFieldSection #customNameTextField
