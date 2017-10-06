@@ -100,6 +100,14 @@ function initializePage() {
 
     // Set the tooltip for the continue buttons
     setContinueButtonTooltip();
+
+    // Bind the reset game function to the keyboard
+    document.addEventListener("keydown", function(event) {
+        if (event.keyCode == 82)
+        {
+            resetGame();
+        }
+    })
 }
 
 
@@ -142,13 +150,7 @@ function resetSavedQuestionAnswers() {
     for (var i = 0; i < 5; i++) {
         sessionStorage.setItem("q" + (i + 1) + "SavedAnswer", "n");
     }
-
-    // sessionStorage.setItem("q1SavedAnswer", "n");
-    // sessionStorage.setItem("q2SavedAnswer", "n");
-    // sessionStorage.setItem("q3SavedAnswer", "n");
-    // sessionStorage.setItem("q4SavedAnswer", "n");
-    // sessionStorage.setItem("q5SavedAnswer", "n");
-
+    
 }
 
 
