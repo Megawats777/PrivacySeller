@@ -28,7 +28,7 @@
     -webkit-transition: all 0.33s cubic-bezier(.26,.99,.82,.9);
     transition: all 0.33s cubic-bezier(.26,.99,.82,.9);
 
-    box-shadow: 0px 1px 10px 8px rgba(9, 164, 236, 0);
+    box-shadow: 0px 1px 10px 8px rgba(9, 164, 236, 0.1);
 }
 
 .CustomNameTextFieldSection #customNameTextField:focus
