@@ -81,7 +81,7 @@ var continueButtonList = new Array(5);
 var pageTopElement;
 var resultTextObjects = new Array(5);
 var resultTextDefaultTextContent;
-
+var keyboardHelpSection = Array(1);
 
 // Initialize the page
 function initializePage() {
@@ -102,12 +102,11 @@ function initializePage() {
     setContinueButtonTooltip();
 
     // Bind the reset game function to the keyboard
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode == 82)
-        {
-            resetGame();
-        }
-    })
+    // document.addEventListener("keydown", function (event) {
+    //     if (event.keyCode == 82) {
+    //         resetGame();
+    //     }
+    // })
 }
 
 
@@ -133,6 +132,9 @@ function getDocumentReferences() {
     resultTextObjects[2] = document.getElementById("q3ResultText");
     resultTextObjects[3] = document.getElementById("q4ResultText");
     resultTextObjects[4] = document.getElementById("q5ResultText");
+
+    // Get the keyboard help section
+    keyboardHelpSection = document.getElementsByClassName("KeyboardHelpSection");
 }
 
 // Set welcome text content
@@ -150,7 +152,7 @@ function resetSavedQuestionAnswers() {
     for (var i = 0; i < 5; i++) {
         sessionStorage.setItem("q" + (i + 1) + "SavedAnswer", "n");
     }
-    
+
 }
 
 
@@ -303,8 +305,7 @@ function resetGame() {
 // Set the tooltip for the continue buttons
 function setContinueButtonTooltip() {
 
-    for (var i = 0; i < continueButtonList.length; i++)
-    {
+    for (var i = 0; i < continueButtonList.length; i++) {
         continueButtonList[i].title = continueButtonTooltipText;
     }
 }
