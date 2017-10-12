@@ -101,6 +101,11 @@ function initializePage() {
     // Set the tooltip for the continue buttons
     setContinueButtonTooltip();
 
+    // Scroll to the top of the page
+    var scrollingSpeed = 2;
+    window.smoothScroll(pageTopElement, scrollingSpeed);
+
+
     // Bind the reset game function to the keyboard
     // document.addEventListener("keydown", function (event) {
     //     if (event.keyCode == 82) {
