@@ -1,19 +1,17 @@
 // The logic for the thank you screen
 
-// The offer answer text elements
+// Document element references
 var offerAnswerTextElements = new Array(5);
-
-// The rep result text elements
 var repResultTextElements = new Array(5);
-
-// The CEO name text element
 var ceoNameTextElement;
+var repTotalTextElement;
 
-// The player's reputation
+
+// Player properties
 var playerReputation = 0;
-
-// The player's rank
 var playerRank;
+
+
 
 // Initialize the page
 function initializePage() {
@@ -35,6 +33,9 @@ function initializePage() {
 
     // Set the text for the ceo name text element
     setCeoNameTextElementContent();
+
+    // Set the colour of the rep total text element
+    setRepTotalTextColour();
 }
 
 // Get document references
@@ -56,6 +57,9 @@ function getDocumentReferences() {
 
     // Get the CEO name text element
     ceoNameTextElement = document.getElementById("CEONameDisplayText");
+
+    // Get the rep total text element
+    repTotalTextElement = document.getElementById("repTotalText");
 }
 
 // Set the answer text content
@@ -114,7 +118,7 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
     var deniedRepValue = questionDeniedRepValue;
 
     // If the offer was not answered
-    if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "n" || sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === null) {
+    if (sessionStorage.getItem("q" + questionNum + "SavedAnswer") === "n" || sessionStorage.getItem("q" + questionNum + "SavedAnswer") === null) {
 
         // Set the text of the selected question rep result element to be 0
         repResultTextElements[(questionNum - 1)].innerHTML = "No Change";
@@ -122,10 +126,10 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
     }
 
     // If the offer was answered
-    else if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") !== "n") {
+    else if (sessionStorage.getItem("q" + questionNum + "SavedAnswer") !== "n") {
 
         // If the offer was authorized
-        if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "a") {
+        if (sessionStorage.getItem("q" + questionNum + "SavedAnswer") === "a") {
 
             // Add to the player's reputation based on the authorized rep value
             playerReputation += authorizedRepValue;
@@ -135,7 +139,7 @@ function checkOffer(questionNum, questionAuthorizedRepValue, questionDeniedRepVa
         }
 
         // If the offer was denied
-        if (sessionStorage.getItem("q"+ questionNum + "SavedAnswer") === "d") {
+        if (sessionStorage.getItem("q" + questionNum + "SavedAnswer") === "d") {
 
             // Add to the player's reputation based on the denied rep value
             playerReputation += deniedRepValue;
@@ -199,12 +203,34 @@ function setCeoNameTextElementContent() {
     // If no ceo name has been set
     // Set the content to be "No Name"
     if (sessionStorage.getItem("SavedCEOName") === null) {
-        ceoNameTextElement.innerHTML ="CEO: " + "No Name";
+        ceoNameTextElement.innerHTML = "CEO: " + "No Name";
     }
 
     // Otherwise
     // Set the content to be the saved CEO name
     else {
         ceoNameTextElement.innerHTML = "CEO: " + sessionStorage.getItem("SavedCEOName");
+    }
+}
+
+// Set the colour of the rep total text element
+function setRepTotalTextColour() {
+
+    // If the player's reputation is greater than 0
+    // Set the colour to be green
+    if (playerReputation > 0) {
+        repTotalTextElement.style = "color: green;";
+    }
+
+    // If the player's reputation is less than 0
+    // Set the colour to be red
+    else if (playerReputation < 0) {
+        repTotalTextElement.style = "color: red;"
+    }
+
+    // Otherwise
+    // Set the colour to be white
+    else {
+        repResultTextElements.style = "color: black;"
     }
 }
