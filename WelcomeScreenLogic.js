@@ -1,4 +1,9 @@
-// Logic for the welcome screen
+/*
+	Creator: 	James Daniel Semilla
+	Date:	 	October 10, 2017
+	File Type:	Javascript
+	Desc:       The logic for the welcome screen		
+*/
 
 
 // The custom name text field

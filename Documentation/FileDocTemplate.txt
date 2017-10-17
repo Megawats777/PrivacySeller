@@ -1,0 +1,25 @@
+--For HTML Files--
+<!--
+	Creator:    James Daniel Semilla
+	Date:	    October 10, 2017
+	File Type:  HTML
+	Desc:		
+-->
+
+
+--For CSS Files--
+/*
+	Creator:	James Daniel Semilla
+	Date:		October 10, 2017
+	File Type:	CSS
+	Desc:		
+*/
+
+
+--For JS Files--
+/*
+	Creator: 	James Daniel Semilla
+	Date:	 	October 10, 2017
+	File Type:	Javascript
+	Desc:		
+*/
