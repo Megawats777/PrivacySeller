@@ -1,4 +1,11 @@
-// The logic for the thank you screen
+/*
+	Creator: 	James Daniel Semilla
+	Date:	 	October 10, 2017
+	File Type:	Javascript
+	Desc:       The logic for the thank you screen or game over screen (I'm really confused at this point)		
+*/
+
+
 
 // Document element references
 var offerAnswerTextElements = new Array(5);
