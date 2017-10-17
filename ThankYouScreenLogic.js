@@ -4,7 +4,7 @@
 var offerAnswerTextElements = new Array(5);
 var repResultTextElements = new Array(5);
 var ceoNameTextElement;
-var repTotalTextElement;
+var repTotalTextNumberElement;
 
 
 // Player properties
@@ -26,7 +26,7 @@ function initializePage() {
     setPlayerReputation();
 
     // Display total player reputation
-    document.getElementById("repTotalText").innerHTML = "Rep Total: " + playerReputation;
+    repTotalTextNumberElement.innerHTML = playerReputation;
 
     // Calculate player rank
     calculatePlayerRank();
@@ -59,7 +59,7 @@ function getDocumentReferences() {
     ceoNameTextElement = document.getElementById("CEONameDisplayText");
 
     // Get the rep total text element
-    repTotalTextElement = document.getElementById("repTotalText");
+    repTotalTextNumberElement = document.getElementById("repTotalTextNumber");
 }
 
 // Set the answer text content
@@ -219,13 +219,13 @@ function setRepTotalTextColour() {
     // If the player's reputation is greater than 0
     // Set the colour to be green
     if (playerReputation > 0) {
-        repTotalTextElement.style = "color: green;";
+        repTotalTextNumberElement.style = "color: green;";
     }
 
     // If the player's reputation is less than 0
     // Set the colour to be red
     else if (playerReputation < 0) {
-        repTotalTextElement.style = "color: red;"
+        repTotalTextNumberElement.style = "color: red;"
     }
 
     // Otherwise

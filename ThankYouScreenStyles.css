@@ -145,24 +145,41 @@
     background-color: green;
 }
 
+.GameSummarySection #CEONameDisplayText
+{   
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
 .GameSummarySection #rankText
 {
     text-align: center;
     font-size: 16px;
 }
 
-.GameSummarySection #repTotalText
+.GameSummarySection .repTotalElementContainer
+{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.GameSummarySection #repTotalTextTitle
 {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    display: inline-block;
 }
 
-.GameSummarySection #CEONameDisplayText
-{   
-    padding-top: 5px;
-    font-size: 15px;
-    text-align: center;
+.GameSummarySection #repTotalTextNumber
+{
+    padding-left: 2px;
+    
+    text-align: left;
+    font-weight: bold;
+    font-size: 27px;
+    display: inline-block;
 }
 
 .HomeScreenButton
