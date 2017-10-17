@@ -1,3 +1,12 @@
+/*
+	Creator: 	James Daniel Semilla
+	Date:	 	October 10, 2017
+	File Type:	Javascript
+	Desc:       The logic for the question screen		
+*/
+
+
+
 // The results for question 1
 // Index 0 is the authorized transaction result
 // Index 1 is the denied transaction result
